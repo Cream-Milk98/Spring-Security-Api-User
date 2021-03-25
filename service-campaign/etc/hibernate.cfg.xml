@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@14.225.5.244:1521:orcl</property>
+<!--        <property name="hibernate.connection.username">9b8111e06655d3ab9be506818331d99e</property>-->
+<!--        <property name="hibernate.connection.password">cfec6eb01f09e438cb9103627df9e839</property>-->
+        <property name="connection.username">9b8111e06655d3ab9be506818331d99e</property>
+        <property name="connection.password">5abcf2b215487058a52e3b9e89bd3199</property>
+        <property name="hibernate.connection.pool_size">64</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    </session-factory>
+</hibernate-configuration>

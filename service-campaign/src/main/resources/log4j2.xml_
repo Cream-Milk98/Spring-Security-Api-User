@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval = "30">
+    <Properties>
+        <Property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</Property>
+        <Property name="pattern2">%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] - %msg%n</Property>
+        <Property name="pattern3">%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [thread-id %T] %l - %msg%n</Property>
+    </Properties>
+
+    <Appenders>
+        <Routing name="Routing">
+            <Routes pattern="$${thread:threadName}">
+                <Route>
+                    <RollingFile name="${thread:threadName}"
+                                 fileName="logsCDR/${thread:threadName}-logs/${thread:threadName}.log"
+                                 filePattern="logsCDR/${thread:threadName}-logs/${thread:threadName}_%d{MM-dd-yyyy}.log.gz">
+                        <LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+                        <PatternLayout>
+                            <pattern>${pattern}</pattern>
+                        </PatternLayout>
+                        <Policies>
+                            <TimeBasedTriggeringPolicy interval="1"/>
+                        </Policies>
+                    </RollingFile>
+                </Route>
+            </Routes>
+        </Routing>
+        <Routing name="Routing2">
+            <Routes pattern="$${thread:threadName}-log-full">
+                <Route>
+                    <RollingFile name="${thread:threadName}-full"
+                                 fileName="logsCDR/${thread:threadName}-logs/${thread:threadName}-full.log"
+                                 filePattern="logsCDR/${thread:threadName}-logs/${thread:threadName}-full_%d{MM-dd-yyyy}-%i.log.gz">
+                        <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+                        <PatternLayout>
+                            <pattern>${pattern2}</pattern>
+                        </PatternLayout>
+                        <Policies>
+                            <TimeBasedTriggeringPolicy interval="1"/>
+                        </Policies>
+                    </RollingFile>
+                </Route>
+            </Routes>
+        </Routing>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern3}" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info" additivity="false">
+            <appender-ref ref="console" />
+            <appender-ref ref="Routing" />
+            <appender-ref ref="Routing2" />
+        </Root>
+        <Logger name="com.viettel.*" additivity="false">
+            <appender-ref ref="Routing" />
+            <appender-ref ref="Routing2" />
+        </Logger>
+    </Loggers>
+
+</Configuration>

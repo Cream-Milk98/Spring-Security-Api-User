@@ -1,0 +1,64 @@
+server:
+  port: 8999
+spring:
+  application:
+    name: campaign
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 3MB
+      max-request-size: 3MB
+#  kafka:
+#    consumer:
+#      bootstrap-servers: 192.168.1.201:9092
+#      group-id: group_id
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    producer:
+#      bootstrap-servers: 192.168.1.201:9092
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+datasource-property:
+#    ccms-full:
+#      driver-class-name: oracle.jdbc.driver.OracleDriver
+#      url: jdbc:oracle:thin:@10.121.26.241:1521/bss
+#      username: IPCC_CCMS
+#      password: YcBana8yPB;][<7
+#      max_pool_size: 64
+#    acd-full:
+#      driver-class-name: oracle.jdbc.driver.OracleDriver
+#      url: jdbc:oracle:thin:@10.121.26.241:1521/bss
+#      username: IPCC_ACD
+#      password: YcBana8yPB;][<7
+#      max_pool_size: 64
+  ccms-full:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@14.225.5.244:1521:orcl
+    username: IPCC_CCMS
+    password: IPCC_CCMS#123
+    max_pool_size: 64
+  acd-full:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@14.225.5.244:1521:orcl
+    username: IPCC_ACD
+    password: IPCC_ACD#123
+    max_pool_size: 64
+
+#logging:
+#  level:
+#    root: INFO
+#    org.springframework.web: INFO
+#    com.memorynotfound: DEBUG
+#  file: log/log.txt
+
+

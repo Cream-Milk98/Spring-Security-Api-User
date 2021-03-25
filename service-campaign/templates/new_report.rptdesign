@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">120</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="22">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.driver.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@14.225.5.244:1521:orcl</property>
+            <property name="odaUser">IPCC_ACD</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">SVBDQ19BQ0QjMTIz</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Calendar" id="39">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CALENDAR_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CALENDAR_ID</text-property>
+                    <text-property name="heading">CALENDAR_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CALENDAR_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CALENDAR_NAME</text-property>
+                    <text-property name="heading">CALENDAR_NAME</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CALENDAR_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CALENDAR_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CALENDAR_ID</property>
+                    <property name="nativeName">CALENDAR_ID</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CALENDAR_NAME</property>
+                    <property name="nativeName">CALENDAR_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select CCMS_FULL.CALENDAR.CALENDAR_ID,CCMS_FULL.CALENDAR.CALENDAR_NAME
+from CCMS_FULL.CALENDAR]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="45">
+            <property name="dataSet">Calendar</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CALENDAR_ID</property>
+                    <text-property name="displayName">CALENDAR_ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALENDAR_ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CALENDAR_NAME</property>
+                    <text-property name="displayName">CALENDAR_NAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CALENDAR_NAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="58"/>
+            <column id="59"/>
+            <column id="60"/>
+            <header>
+                <row id="46">
+                    <cell id="47"/>
+                    <cell id="48">
+                        <label id="62">
+                            <text-property name="text">CALENDAR_ID</text-property>
+                        </label>
+                    </cell>
+                    <cell id="49">
+                        <label id="64">
+                            <text-property name="text">CALENDAR_NAME</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="50">
+                    <cell id="51"/>
+                    <cell id="52">
+                        <data id="63">
+                            <property name="resultSetColumn">CALENDAR_ID</property>
+                        </data>
+                    </cell>
+                    <cell id="53">
+                        <data id="65">
+                            <property name="resultSetColumn">CALENDAR_NAME</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="54">
+                    <cell id="55"/>
+                    <cell id="56"/>
+                    <cell id="57"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

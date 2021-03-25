@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">120</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="62">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@14.225.5.244:1521:orcl</property>
+            <property name="odaUser">IPCC_CCMS</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">SVBDQ19DQ01TIzEyMw==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set 1" id="63">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CAMPAIGN_ID</property>
+                    <text-property name="displayName">CAMPAIGN_ID</text-property>
+                    <text-property name="heading">CAMPAIGN_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CAMPAIGN_NAME</property>
+                    <text-property name="displayName">CAMPAIGN_NAME</text-property>
+                    <text-property name="heading">CAMPAIGN_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CAMPAIGN_CODE</property>
+                    <text-property name="displayName">CAMPAIGN_CODE</text-property>
+                    <text-property name="heading">CAMPAIGN_CODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">START_TIME</property>
+                    <text-property name="displayName">START_TIME</text-property>
+                    <text-property name="heading">START_TIME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">END_TIME</property>
+                    <text-property name="displayName">END_TIME</text-property>
+                    <text-property name="heading">END_TIME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CUSTOMER_COUNT</property>
+                    <text-property name="displayName">CUSTOMER_COUNT</text-property>
+                    <text-property name="heading">CUSTOMER_COUNT</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CAMPAIGN_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CAMPAIGN_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CAMPAIGN_CODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">START_TIME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">END_TIME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">CUSTOMER_COUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CAMPAIGN_ID</property>
+                    <property name="nativeName">CAMPAIGN_ID</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CAMPAIGN_NAME</property>
+                    <property name="nativeName">CAMPAIGN_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CAMPAIGN_CODE</property>
+                    <property name="nativeName">CAMPAIGN_CODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">START_TIME</property>
+                    <property name="nativeName">START_TIME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">END_TIME</property>
+                    <property name="nativeName">END_TIME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">CUSTOMER_COUNT</property>
+                    <property name="nativeName">CUSTOMER_COUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select c.CAMPAIGN_ID,c.campaign_name ,c.campaign_code ,TO_CHAR(c.start_time,'dd/mm/yyyy') as start_time, TO_CHAR(c.end_time,'DD/MM/YYYY') as end_time
+    ,(select count(DISTINCT cc.CUSTOMER_ID) from CAMPAIGN_CUSTOMER cc join CUSTOMER cu on cu.CUSTOMER_ID = cc.CUSTOMER_ID and cu.STATUS = 1 
+        where c.CAMPAIGN_ID = cc.CAMPAIGN_ID and cc.IN_CAMPAIGN_STATUS = 1  
+    ) as customer_count
+from CAMPAIGN c
+
+where 1=1
+and c.COMPANY_SITE_ID =662911
+--and c.CAMPAIGN_ID =21
+GROUP BY c.CAMPAIGN_ID,c.campaign_name ,c.campaign_code ,c.start_time,c.end_time
+ ORDER BY c.CAMPAIGN_ID ASC]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPAIGN_ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CAMPAIGN_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CAMPAIGN_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPAIGN_NAME</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>4000</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CAMPAIGN_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CAMPAIGN_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>4000</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPAIGN_CODE</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>200</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CAMPAIGN_CODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CAMPAIGN_CODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>200</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>START_TIME</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>START_TIME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>START_TIME</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>END_TIME</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>END_TIME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>END_TIME</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMER_COUNT</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMER_COUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMER_COUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>39</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set 2" id="74">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CAMPAIGN_ID</property>
+                    <text-property name="displayName">CAMPAIGN_ID</text-property>
+                    <text-property name="heading">CAMPAIGN_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONTACT_STATUS</property>
+                    <text-property name="displayName">CONTACT_STATUS</text-property>
+                    <text-property name="heading">CONTACT_STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">COMPLETE_NAME</property>
+                    <text-property name="displayName">COMPLETE_NAME</text-property>
+                    <text-property name="heading">COMPLETE_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONTACT_STATUS_COUNT</property>
+                    <text-property name="displayName">CONTACT_STATUS_COUNT</text-property>
+                    <text-property name="heading">CONTACT_STATUS_COUNT</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CAMPAIGN_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CONTACT_STATUS</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">COMPLETE_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CONTACT_STATUS_COUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CAMPAIGN_ID</property>
+                    <property name="nativeName">CAMPAIGN_ID</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CONTACT_STATUS</property>
+                    <property name="nativeName">CONTACT_STATUS</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">COMPLETE_NAME</property>
+                    <property name="nativeName">COMPLETE_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">CONTACT_STATUS_COUNT</property>
+                    <property name="nativeName">CONTACT_STATUS_COUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[ SELECT ccr.CAMPAIGN_ID,ccr.CONTACT_STATUS,ccc.COMPLETE_NAME,COUNT(*) as CONTACT_STATUS_COUNT
+    FROM CONTACT_CUST_RESULT ccr 
+    JOIN CAMPAIGN_COMPLETE_CODE  ccc ON ccr.CONTACT_STATUS = ccc.COMPLETE_VALUE AND ccc.COMPLETE_TYPE = 1 AND ccc.STATUS = 1
+    WHERE 1=1
+    GROUP BY CCR.CAMPAIGN_ID,ccr.CONTACT_STATUS,ccc.COMPLETE_NAME ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CAMPAIGN_ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CAMPAIGN_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CAMPAIGN_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTACT_STATUS</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>2</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTACT_STATUS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTACT_STATUS</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COMPLETE_NAME</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COMPLETE_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COMPLETE_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTACT_STATUS_COUNT</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTACT_STATUS_COUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTACT_STATUS_COUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>39</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="4">
+            <column id="5"/>
+            <column id="6"/>
+            <column id="7"/>
+            <column id="8"/>
+            <row id="9">
+                <cell id="10">
+                    <table id="14">
+                        <property name="dataSet">Data Set 1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">CAMPAIGN_CODE</property>
+                                <text-property name="displayName">CAMPAIGN_CODE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CAMPAIGN_CODE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CAMPAIGN_NAME</property>
+                                <text-property name="displayName">CAMPAIGN_NAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CAMPAIGN_NAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CUSTOMER_COUNT</property>
+                                <text-property name="displayName">CUSTOMER_COUNT</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CUSTOMER_COUNT"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                        </list-property>
+                        <column id="27"/>
+                        <column id="28"/>
+                        <column id="29"/>
+                        <column id="71"/>
+                        <header>
+                            <row id="15">
+                                <cell id="16"/>
+                                <cell id="17">
+                                    <label id="64">
+                                        <text-property name="text">CAMPAIGN_CODE</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="18">
+                                    <label id="66">
+                                        <text-property name="text">CAMPAIGN_NAME</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="68">
+                                    <label id="72">
+                                        <text-property name="text">CUSTOMER_COUNT</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="19">
+                                <cell id="20"/>
+                                <cell id="21">
+                                    <data id="65">
+                                        <property name="resultSetColumn">CAMPAIGN_CODE</property>
+                                    </data>
+                                </cell>
+                                <cell id="22">
+                                    <data id="67">
+                                        <property name="resultSetColumn">CAMPAIGN_NAME</property>
+                                    </data>
+                                </cell>
+                                <cell id="69">
+                                    <data id="73">
+                                        <property name="resultSetColumn">CUSTOMER_COUNT</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="23">
+                                <cell id="24"/>
+                                <cell id="25"/>
+                                <cell id="26"/>
+                                <cell id="70"/>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+                <cell id="11">
+                    <table id="30">
+                        <property name="dataSet">Data Set 2</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">COMPLETE_NAME</property>
+                                <text-property name="displayName">COMPLETE_NAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["COMPLETE_NAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CONTACT_STATUS</property>
+                                <text-property name="displayName">CONTACT_STATUS</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CONTACT_STATUS"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CONTACT_STATUS_COUNT</property>
+                                <text-property name="displayName">CONTACT_STATUS_COUNT</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CONTACT_STATUS_COUNT"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                        </list-property>
+                        <column id="43"/>
+                        <column id="44"/>
+                        <column id="45"/>
+                        <column id="84"/>
+                        <header>
+                            <row id="31">
+                                <cell id="32"/>
+                                <cell id="33">
+                                    <label id="75">
+                                        <text-property name="text">COMPLETE_NAME</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="34">
+                                    <label id="77">
+                                        <text-property name="text">CONTACT_STATUS</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="81">
+                                    <label id="85">
+                                        <text-property name="text">CONTACT_STATUS_COUNT</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="35">
+                                <cell id="36"/>
+                                <cell id="37">
+                                    <data id="76">
+                                        <property name="resultSetColumn">COMPLETE_NAME</property>
+                                    </data>
+                                </cell>
+                                <cell id="38">
+                                    <data id="78">
+                                        <property name="resultSetColumn">CONTACT_STATUS</property>
+                                    </data>
+                                </cell>
+                                <cell id="82">
+                                    <data id="86">
+                                        <property name="resultSetColumn">CONTACT_STATUS_COUNT</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="39">
+                                <cell id="40"/>
+                                <cell id="41"/>
+                                <cell id="42"/>
+                                <cell id="83"/>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+                <cell id="12"/>
+                <cell id="13"/>
+            </row>
+        </grid>
+    </body>
+</report>
